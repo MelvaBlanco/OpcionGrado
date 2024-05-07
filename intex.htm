@@ -20,6 +20,7 @@
         .catch(error => document.getElementById('temp').innerHTML = "Error al cargar la temperatura");
     }
 
+    // Llama a obtenerTemperatura() cada segundo (1000 milisegundos)
     setInterval(obtenerTemperatura, 1000);
   </script>
 </body>
