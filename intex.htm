@@ -14,7 +14,7 @@
   <div id="temp">Cargando...</div>
   <script>
     function obtenerTemperatura() {
-      fetch('https://tu-esp32.example.com/temperatura')
+      fetch('https://192.168.1.233/temperatura')
         .then(response => response.text())
         .then(data => document.getElementById('temp').innerHTML = data + " &deg;C")
         .catch(error => document.getElementById('temp').innerHTML = "Error al cargar la temperatura");
