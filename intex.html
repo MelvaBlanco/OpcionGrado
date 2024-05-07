@@ -11,16 +11,15 @@
 </head>
 <body>
   <h1>Temperatura en Tiempo Real</h1>
-  <div id="temp">Cargando...</div>
+  <div id="temp">TEMP: Cargando...</div>
   <script>
     function obtenerTemperatura() {
       fetch('https://192.168.1.233/temperatura')
         .then(response => response.text())
-        .then(data => document.getElementById('temp').innerHTML = data + " &deg;C")
+        .then(data => document.getElementById('temp').innerHTML = 'TEMP: ' + data + " &deg;C")
         .catch(error => document.getElementById('temp').innerHTML = "Error al cargar la temperatura");
     }
 
-    // Llama a obtenerTemperatura() cada segundo (1000 milisegundos)
     setInterval(obtenerTemperatura, 1000);
   </script>
 </body>
